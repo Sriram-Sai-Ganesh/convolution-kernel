@@ -10,7 +10,11 @@ def get_kernel(kernel_name):
 		case "blur":
 			return average_blur(dimensions)
 		case "gaussian blur":
-			return gaussian_blur(9)		
+			return gaussian_blur(9)
+		case "x sobel":
+			return x_sobel(dimensions)
+		case "y sobel":
+			return y_sobel(dimensions)
 		case "none":
 			return np.zeros(dimensions)
 		case other:
@@ -23,6 +27,12 @@ def identity(dimensions):
 
 def average_blur(dimensions):
 	return np.ones(dimensions)/(dimensions[0]*dimensions[1])
+
+def x_sobel(dimensions):
+	return np.array([[1, 0, -1], [2, 0, -2], [1, 0, -1]])
+
+def y_sobel(dimensions):
+	return np.array([[1, 2, 1], [0, 0, 0], [-1, -2, -1]])
 
 # code modified from @clemisch 
 # create a gaussian kernel
