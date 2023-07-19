@@ -43,10 +43,18 @@ def process_frame(image, kernel):
 	print("ms")
 	return result
 
+def run_gaussian():
+	kernel_name = "gaussian blur"
+	kernel = get_kernel(kernel_name)
+	print("\nKernel dimensions: ",len(kernel),"x",len(kernel[0]))
+	print("Using kernel:\n", kernel)
+	# process_video(kernel=kernel)
+	process_image(source_name = "input/barn.jpg", kernel = kernel)
 
-kernel_name = "gaussian blur"
+
+kernel_name = "x sobel"
 kernel = get_kernel(kernel_name)
 print("\nKernel dimensions: ",len(kernel),"x",len(kernel[0]))
-print("Using kernel: ", kernel)
+print("Using kernel:\n", kernel)
 # process_video(kernel=kernel)
 process_image(source_name = "input/barn.jpg", kernel = kernel)
