@@ -1,6 +1,8 @@
 # code modified from 
 # Python OpenCV: Optical Flow with Lucas-Kanade method
-# TODO: identify points using 6 image moments
+
+# future work on tracking is at https://github.com/Sriram-Sai-Ganesh/landmark-tracking
+
 import numpy as np
 import cv2
 
